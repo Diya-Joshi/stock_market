@@ -1,7 +1,7 @@
 import pandas as pd
 
-data1 = pd.read_csv("D:\\stock_market analysis\\EQUITY_L.csv")
-data2 = pd.read_csv("D:\\stock_market analysis\\ind_nifty100list.csv")
+data1 = pd.read_csv(".\EQUITY_L.csv")
+data2 = pd.read_csv(".\ind_nifty100list.csv")
 merge_data = pd.merge(data1, data2, on=["Symbol", "ISIN Code", "Series"])
 final_data = merge_data[['Symbol', 'Company Name', 'Series', 'Date of listing', 'ISIN Code', 'Industry', 'Face value']]
 sorted_data = final_data.sort_values('Face value')
